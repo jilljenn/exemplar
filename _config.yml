@@ -1,5 +1,6 @@
 highlighter: pygments
 permalink: /post/:title
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', '.git']
-paginate: 4
-gems: [jekyll-paginate]
+author: Jill-Jênn Vie
+initials: Jill-Jênn Vie
+avatar: /img/avatar.png

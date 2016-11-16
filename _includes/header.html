@@ -2,14 +2,14 @@
     <div class="container">
         <div class="profile">
             <div class="social">
-                <a href="http://twitter.com/tybenz">
+                <a href="http://twitter.com/jjvie">
                     <div data-picture data-alt="Twitter">
                         <div data-src="{{ site.baseurl }}/img/twitter16.png"></div>
                         <div data-src="{{ site.baseurl }}/img/twitter32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
                         <noscript><img src="{{ site.baseurl }}/img/twitter16.png" alt="Twitter"></noscript>
                     </div>
                 </a>
-                <a href="http://github.com/tybenz">
+                <a href="http://github.com/jilljenn">
                     <div data-picture data-alt="Github">
                         <div data-src="{{ site.baseurl }}/img/octocat16.png"></div>
                         <div data-src="{{ site.baseurl }}/img/octocat32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
@@ -18,35 +18,23 @@
                 </a>
             </div>
             <div class="avatar" data-picture data-alt="avatar">
-                <div data-src="{% include avatar_url %}?s=54"></div>
-                <div data-src="{% include avatar_url %}?s=108" data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
-                <noscript><img src="{% include avatar_url %}?s=54" alt="avatar"></noscript>
+                <div data-src="{{ site.avatar }}?s=54"></div>
+                <div data-src="{{ site.avatar }}?s=108" data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
+                <noscript><img src="{{ site.avatar }}?s=54" alt="avatar"></noscript>
             </div>
         </div>
-        <h5 class="logo"><a href="http://tybenz.com">Tyler Benziger</a></h5>
+        <h5 class="logo"><a href="/">{{ site.initials }}</a></h5>
         <nav class="main">
             <ul>
-                {% if page.nav == "blog" %}
-                    <li><a href="http://tybenz.com" class="active">Blog</a></li>
-                {% else %}
-                    <li><a href="http://tybenz.com">Blog</a></li>
-                {% endif %}
-                {% if page.nav == "about" %}
-                <li><a href="http://tybenz.com/about" class="active">About</a></li>
-                {% else %}
-                <li><a href="http://tybenz.com/about">About</a></li>
-                {% endif %}
-                {% if page.nav == "projects" %}
-                <li><a href="http://tybenz.com/projects" class="active">Projects</a></li>
-                {% else %}
-                <li><a href="http://tybenz.com/projects">Projects</a></li>
-                {% endif %}
+                <li><a data-id="phd" href="/"{% if page.nav == "phd" %} class="active"{% else %}{% endif %}>Thèse</a></li>
+                <li><a data-id="publications" href="/publications"{% if page.nav == "publications" %} class="active"{% else %}{% endif %}>Publications</a></li>
+                <li><a data-id="slides" href="/slides"{% if page.nav == "slides" %} class="active"{% else %}{% endif %}>Slides</a></li>
             </ul>
         </nav>
         <div class="nav-slider">
             <div class="nav-selection {{ page.nav }}"></div>
         </div>
-        <div class="subnav-slider">
+<!--        <div class="subnav-slider">
             <div class="subnav-selection {{ page.subnav }}"></div>
         </div>
         <nav class="subnav">
@@ -67,6 +55,6 @@
                     <li><a href="https://github.com/tybenz/exemplar/archive/master.zip" data-subnav="download">Download</a></li>
                 {% endif %}
             </ul>
-        </nav>
+        </nav> -->
     </div>
 </header>

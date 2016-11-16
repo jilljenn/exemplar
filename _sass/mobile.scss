@@ -10,7 +10,7 @@ $black: #111;
 $darkGrey: #222;
 $grey: #444;
 $lightGrey: #ccc;
-$blue: #6EC5FF;
+$blue: #5EA5FF;
 $indigo: #5EA5FF;
 
 body {
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5 {
     color: $darkGrey;
     font-family: $headingFamily;
     text-transform: uppercase;
-    font-weight: normal;
+    /* font-weight: normal; */
     line-height: 0.8em;
     margin: 0.4em 0;
     a {
@@ -83,6 +83,10 @@ p {
     @include outer-container;
     max-width: 780px;
     position: relative;
+}
+
+article p:last-child {
+    margin-bottom: 0;
 }
 
 header a {
@@ -135,19 +139,19 @@ header .nav-selection {
     background-color: $blue;
 }
 
-header .nav-selection.about {
-    width: 44px;
-    left: 49px;
+header .nav-selection.phd {
+    width: 50px;
+    left: 0px;
 }
 
-header .nav-selection.blog {
-    width: 33px;
-    left: 0;
+header .nav-selection.publications {
+    width: 105px;
+    left: 50px;
 }
 
-header .nav-selection.projects {
+header .nav-selection.slides {
     width: 60px;
-    left: 107px;
+    left: 155px;
 }
 
 header .subnav-selection {
@@ -174,12 +178,13 @@ header .subnav-selection.download {
 
 header .profile {
     float: right;
-    height: 58px;
-    max-width: 84px;
-    margin-top: 14px;
+    /* height: 58px; */
+    /* max-width: 84px; */
+    /* margin-top: 14px; */
 }
 
 header .social {
+    margin-top: 4px;
     width: 16px;
     float: left;
 }
@@ -190,11 +195,11 @@ header .social img {
 }
 
 header .avatar {
-    height: 58px;
-    width: 58px;
-    border: 2px solid $black;
+    height: 64px;
+    width: 64px;
+    /* border: 2px solid $black; */
     float: left;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     img {
       width: 100%;
       height: 100%;
